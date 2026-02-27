@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F0FFF1;
+  color: #424651;
+  line-height: 1;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+#survey-form {
+  background: #B3E9C7;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  padding: 10px;
+  border: 2px solid #5603AD;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+
+}
+
+:is(input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea):hover, :is(input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea):focus {
+    border: 2px solid #a793d9;
+    outline: none;
+    cursor: pointer;
+}
+
+#submit {
+  background-color: #8367C7;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+  display: block;
+}
+
+#submit:hover {
+  background-color: #5603AD;
+  cursor: pointer;
+}
+
+h1, p {
+    margin: 10px;
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio-group input, .checkbox-group input {
+    transform: translateY(-3px);
+}
+
+textarea {
+    resize: vertical;
+}

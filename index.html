@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
+    <link rel="stylesheet" href="./styles.css">
   </head>
 
   <body>
@@ -14,20 +15,15 @@
     <main>
       <form id="survey-form">
         <section>
-          <br>
           <label for="name" id="name-label">Name: </label>
           <input required id="name" type="text" placeholder="Enter your name" name="name">
-          <br>
           <label for="email" id="email-label">Email: </label>
           <input required id="email" type="email" placeholder="Enter your email" name="email">
-          <br>
           <label for="number" id="number-label">Age (optional): </label>
           <input type="number" id="number" min="3" max="120" placeholder="Age" name="age">
         </section>
         <section>
-          <br>
           <label for="dropdown">Which option best describes your current role?</label>
-          <br>
           <select id="dropdown" name="role">
             <option value="" selected disabled>Select current role</option>
             <option value="student">Student</option>
@@ -37,36 +33,43 @@
           </select>
         </section>
         <section>
-          <br>
           <label>Would you recommend freeCodeCamp to a friend?</label>
-          <br>
-          <input id="definitely" type="radio" name="opinion" value="definitely">
-          <label for="definitely" selected>Definitely</label>
-          <input id="maybe" type="radio" name="opinion" value="maybe">
-          <label for="maybe">Maybe</label>
-          <input id="no" type="radio" name="opinion" value="no">
-          <label for="no">No</label>
+          <div class="radio-group">
+            <input checked id="definitely" type="radio" name="opinion" value="definitely">
+            <label for="definitely">Definitely</label>
+          </div>
+          <div class="radio-group">
+            <input id="maybe" type="radio" name="opinion" value="maybe">
+            <label for="maybe">Maybe</label>
+          </div>
+          <div class="radio-group">
+            <input id="no" type="radio" name="opinion" value="no">
+            <label for="no">No</label>
+          </div>
         </section>
         <section>
-          <br>
           <label>What is your favorite feature of freeCodeCamp?</label>
-          <br>
-          <input type="checkbox" id="challenges" name="favorite-feature" value="challenges">
+          <div class="checkbox-group">
+            <input type="checkbox" id="challenges" name="favorite-feature" value="challenges">
           <label for="challenges">Challenges</label>
-          <input type="checkbox" id="projects" name="favorite-feature" value="projects">
-          <label for="projects">Projects</label>
-          <input type="checkbox" id="community" name="favorite-feature" value="community">
-          <label for="community">Community</label>
-          <input type="checkbox" id="open-source" name="favorite-feature" value="open-source">
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="projects" name="favorite-feature" value="projects">
+            <label for="projects">Projects</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="community" name="favorite-feature" value="community">
+            <label for="community">Community</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="open-source" name="favorite-feature" value="open-source">
           <label for="open-source">Open Source</label>
+          </div>
         </section>
         <section>
-          <br>
           <label for="comments">Any comments or suggestions?</label>
-          <br>
           <textarea id="comments" name="comments" rows="5" cols="50" placeholder="Enter your comment here.."></textarea>
         </section>
-        <br>
         <button type="submit" id="submit">Submit</button>
       </form>
     </main>
